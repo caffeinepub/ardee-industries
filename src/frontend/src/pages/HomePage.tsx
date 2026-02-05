@@ -17,7 +17,7 @@ export default function HomePage() {
                 <span className="block text-accent">Simplified</span>
               </h1>
               <p className="text-lg text-muted-foreground md:text-xl">
-                ARDEE INDUSTRIES connects buyers and sellers in the aluminum can recycling market. 
+                ARDEE INDUSTRIES connects buyers and sellers in the aluminum can market. 
                 Reliable sourcing, competitive pricing, and sustainable solutions for your business.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -58,9 +58,9 @@ export default function HomePage() {
               <div className="rounded-full bg-accent/10 p-4">
                 <Recycle className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold">Sustainable Recycling</h3>
+              <h3 className="text-xl font-semibold">Sustainable Solutions</h3>
               <p className="text-muted-foreground">
-                Supporting the circular economy through efficient aluminum can recycling and reuse programs.
+                Supporting the circular economy through efficient aluminum can recovery and reuse programs.
               </p>
             </div>
           </ThemeCard>

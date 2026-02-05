@@ -10,7 +10,10 @@ export default function SiteFooter() {
               ARDEE INDUSTRIES
             </h3>
             <p className="text-sm text-muted-foreground">
-              Leading aluminum can trading solutions for sustainable recycling and industrial supply.
+              Leading aluminum can trading solutions for sustainable material recovery and industrial supply.
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              We have a warehouse in Wada MIDC
             </p>
           </div>
           <div>
@@ -39,6 +42,9 @@ export default function SiteFooter() {
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground">
               Contact
             </h3>
+            <p className="text-sm text-muted-foreground mb-2">
+              UNIT NO 105, MEGHDHOOT SIGNATURE INDUSTRIAL PARK, NEAR RTO, HDIL VIRAR EAST, MUMBAI
+            </p>
             <p className="text-sm text-muted-foreground">
               Get in touch for quotes, partnerships, or general inquiries about aluminum can trading.
             </p>

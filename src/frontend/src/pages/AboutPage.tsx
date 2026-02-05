@@ -12,7 +12,7 @@ export default function AboutPage() {
               About ARDEE INDUSTRIES
             </h1>
             <p className="text-lg text-muted-foreground">
-              Your trusted partner in aluminum can trading and sustainable recycling solutions
+              Your trusted partner in aluminum can trading and sustainable material solutions
             </p>
           </div>
         </div>
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Mission</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             ARDEE INDUSTRIES is dedicated to facilitating efficient and sustainable aluminum can trading 
-            in the global recycling market. We connect buyers and sellers, ensuring quality materials, 
+            in the global market. We connect buyers and sellers, ensuring quality materials, 
             competitive pricing, and reliable logistics for every transaction.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold">Sustainability</h3>
                 <p className="text-sm text-muted-foreground">
-                  Promoting recycled aluminum use to reduce environmental impact and conserve natural resources.
+                  Promoting recovered aluminum use to reduce environmental impact and conserve natural resources.
                 </p>
               </div>
             </ThemeCard>
@@ -100,12 +100,12 @@ export default function AboutPage() {
             Commitment to Sustainability
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Aluminum is infinitely recyclable without loss of quality, making it one of the most sustainable 
-            materials in industrial use. Recycling aluminum cans saves 95% of the energy required to produce 
+            Aluminum is infinitely recoverable without loss of quality, making it one of the most sustainable 
+            materials in industrial use. Reprocessing aluminum cans saves 95% of the energy required to produce 
             new aluminum from raw materials.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            At ARDEE INDUSTRIES, we facilitate this crucial recycling loop by connecting sources of used 
+            At ARDEE INDUSTRIES, we facilitate this crucial material loop by connecting sources of used 
             aluminum cans with manufacturers who can transform them into new products. Every transaction 
             we facilitate contributes to:
           </p>

@@ -1,230 +1,61 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "ARDEE INDUSTRIES aluminum can trading marketing site + inquiries + admin viewer",
+  "title": "Remove 'recycling' wording and add Wada MIDC warehouse copy",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Create a responsive English marketing website for ARDEE INDUSTRIES with clear navigation and prominent branding.",
+      "summary": "Remove all instances of the word \"recycling\" from public marketing copy and replace with equivalent wording that preserves meaning.",
       "acceptanceCriteria": [
-        "The site header prominently displays \"ARDEE INDUSTRIES\"",
-        "The site renders well on mobile and desktop (no horizontal scrolling at common breakpoints)",
-        "All visible UI text is in English"
+        "The rendered public pages (Home, About, Trading, Contact) contain zero instances of the word \"recycling\" (case-insensitive).",
+        "Shared components (e.g., footer/header) contain zero instances of the word \"recycling\" (case-insensitive).",
+        "No new UI copy introduces the word \"recycling\"."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/App.tsx",
-          "operation": "create",
-          "description": "Create the app shell with a responsive layout (header/nav + main + footer) and wire up top-level routes for the public marketing pages and admin area."
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update hero and feature-section marketing copy to remove the word \"recycling\" while keeping the same intent (e.g., refer to aluminum can trading, circular economy, sustainability, and material recovery without using the word)."
         },
         {
-          "path": "frontend/src/components/site/SiteHeader.tsx",
-          "operation": "create",
-          "description": "Implement a responsive header that prominently displays \"ARDEE INDUSTRIES\", includes primary navigation links, and renders the logo image from frontend/public/assets/generated/ardee-industries-logo.dim_1024x256.png."
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Revise all public-facing About page headings and paragraphs containing the word \"recycling\" (including phrases like \"sustainable recycling solutions\" and \"global recycling market\") to alternative wording that preserves meaning but contains zero instances of \"recycling\"."
+        },
+        {
+          "path": "frontend/src/pages/TradingPage.tsx",
+          "operation": "modify",
+          "description": "Update Trading page header and 'What We Trade' descriptions to remove the word \"recycling\" (including references like \"recycled ...\" sentences that include \"recycling\" and any mention of \"recycling market\"), ensuring the content remains accurate and clear."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Verify and update Contact page visible marketing copy to ensure it contains zero instances of the word \"recycling\" (case-insensitive), without changing inquiry submission behavior."
         },
         {
           "path": "frontend/src/components/site/SiteFooter.tsx",
-          "operation": "create",
-          "description": "Add a simple footer with company name, brief tagline, and contact shortcuts to improve navigation clarity on all pages."
-        },
-        {
-          "path": "frontend/src/components/site/SiteLayout.tsx",
-          "operation": "create",
-          "description": "Add a reusable layout wrapper to ensure consistent spacing, max-width container behavior, and responsive padding across pages."
+          "operation": "modify",
+          "description": "Remove/replace the word \"recycling\" from the footer company description and any other footer copy while preserving meaning and keeping the footer public."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Implement Home, Trading, About, and Contact/Inquiry pages with domain-relevant aluminum can trading copy and accessible navigation to each.",
+      "summary": "Add the exact sentence \"We have a warehouse in Wada MIDC\" to a visible location on the Contact page (and optionally also in the footer for consistency).",
       "acceptanceCriteria": [
-        "Users can reach Home, Trading, About, and Contact/Inquiry from the main navigation",
-        "Each page/section contains non-placeholder, domain-relevant copy for aluminum can trading"
+        "The Contact page displays the sentence \"We have a warehouse in Wada MIDC\" in English exactly as written.",
+        "The sentence is visible without requiring login and appears in a non-collapsed section of the page."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/pages/HomePage.tsx",
-          "operation": "create",
-          "description": "Create the Home page with an overview of ARDEE INDUSTRIES aluminum can trading, including a hero section that displays frontend/public/assets/generated/hero-aluminum-trading.dim_1920x900.png and concise value proposition copy."
-        },
-        {
-          "path": "frontend/src/pages/TradingPage.tsx",
-          "operation": "create",
-          "description": "Create the Trading page explaining how aluminum can trading works, what grades/streams are traded, typical logistics steps, quality checks, and what information is needed to request a quote."
-        },
-        {
-          "path": "frontend/src/pages/AboutPage.tsx",
-          "operation": "create",
-          "description": "Create the About page describing ARDEE INDUSTRIES, safety/compliance mindset, sustainability angle (recycled aluminum), and operating principles relevant to industrial trading."
-        },
-        {
-          "path": "frontend/src/pages/ContactPage.tsx",
-          "operation": "create",
-          "description": "Create the Contact/Inquiry page with contact information and embed the Inquiry form component as the primary call-to-action."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Wire the Home, Trading, About, and Contact routes into the router and ensure the SiteHeader navigation links reach each page."
-        },
-        {
-          "path": "frontend/src/components/site/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Add/confirm main navigation items for Home, Trading, About, and Contact/Inquiry and ensure they are accessible on mobile (e.g., collapsible menu)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Add a validated Inquiry form collecting required fields, showing success/error states, and submitting to the backend inquiry creation capability.",
-      "acceptanceCriteria": [
-        "The form prevents submission when required fields are missing and shows inline validation messages",
-        "On successful submission, a confirmation message is shown and the form resets",
-        "On failure, an error message is shown without losing the user-entered text"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/inquiry/InquiryForm.tsx",
-          "operation": "create",
-          "description": "Implement the Inquiry form UI with fields: name, company (optional), email or phone, inquiry type (Buy/Sell/Partnership), location (optional), estimated quantity (optional), message, and consent checkbox; include client-side validation and inline error messages."
-        },
-        {
-          "path": "frontend/src/hooks/useCreateInquiry.ts",
-          "operation": "create",
-          "description": "Create a React Query mutation hook that calls the backend createInquiry capability via useActor, mapping the form fields into the backend InquiryInput (e.g., subject/body/messageType) and returning success/error states."
-        },
         {
           "path": "frontend/src/pages/ContactPage.tsx",
           "operation": "modify",
-          "description": "Render the InquiryForm on the Contact/Inquiry page and include clear English guidance text about expected response times and what details help with pricing/logistics."
+          "description": "Add the exact sentence \"We have a warehouse in Wada MIDC\" in the Contact page contact information area in a clearly visible, non-collapsed section (e.g., near the Location block or within the contact info card)."
         },
         {
-          "path": "frontend/src/components/inquiry/InquirySubmissionResult.tsx",
-          "operation": "create",
-          "description": "Add a small reusable UI component to display success and error states for inquiry submission without clearing user-entered data on failure."
-        },
-        {
-          "path": "frontend/src/components/inquiry/inquiryMapping.ts",
-          "operation": "create",
-          "description": "Add a helper that formats the collected form fields into a stable, readable subject/body payload for backend storage (ensuring all required fields are preserved)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Add a frontend admin area using Internet Identity login to list inquiries (newest first) and view inquiry details.",
-      "acceptanceCriteria": [
-        "Admin login uses the existing Internet Identity integration (without modifying immutable hook files)",
-        "After login, the admin can view a list of inquiries (most recent first)",
-        "Admin can open an inquiry to view all its fields"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/auth/LoginButton.tsx",
-          "operation": "create",
-          "description": "Create a login/logout button using the existing Internet Identity hook (useInternetIdentity) for admin access. Use the selected component \"authorization\" capability for Internet Identity-based authentication. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/admin/AdminGuard.tsx",
-          "operation": "create",
-          "description": "Create an admin route guard that checks authentication status and calls backend isCallerAdmin; show an access-denied state for non-admin users. Use the selected component \"authorization\" capability for role-based access control UI. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/admin/AdminInquiriesPage.tsx",
-          "operation": "create",
-          "description": "Create the admin inquiries list page that fetches listInquiries via useActor and renders inquiries sorted most-recent-first (based on id ordering if timestamps are not available)."
-        },
-        {
-          "path": "frontend/src/pages/admin/AdminInquiryDetailsPage.tsx",
-          "operation": "create",
-          "description": "Create the inquiry details view page that loads a single inquiry (getInquiry) and renders all fields provided by the backend, including submitter, subject, body, and messageType."
-        },
-        {
-          "path": "frontend/src/hooks/useAdminInquiries.ts",
-          "operation": "create",
-          "description": "Add React Query hooks for admin-only fetching: listInquiries and getInquiry, including handling authorization failures gracefully in the UI."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/site/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Wire admin routes (e.g., /admin/inquiries and /admin/inquiries/:id) and wrap them with AdminGuard; include a navigation entry to the admin area that is visible but safely gated."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Define and apply a consistent ARDEE INDUSTRIES visual theme across typography, spacing, buttons, cards, and layout (not primarily blue/purple).",
-      "acceptanceCriteria": [
-        "A consistent color palette and typographic scale is used across all pages",
-        "Primary/secondary button styles are consistent and reused",
-        "The overall theme is not primarily blue/purple"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "create",
-          "description": "Create global styles and set Tailwind/shadcn CSS variables for an industrial palette (e.g., charcoal/graphite + aluminum gray + safety orange accent) to avoid blue/purple as primary brand colors."
-        },
-        {
-          "path": "frontend/src/components/site/ThemeCard.tsx",
-          "operation": "create",
-          "description": "Create a small wrapper component for consistent card styling (spacing, border, shadow) by composing existing shadcn-ui components (do not edit files under frontend/src/components/ui). Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/site/ThemeButton.tsx",
-          "operation": "create",
-          "description": "Create a small wrapper for consistent primary/secondary button usage by composing existing shadcn-ui button components (do not edit files under frontend/src/components/ui). Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/site/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Apply the shared button/card/typography styling in the header navigation (including mobile menu) so branding and interactions match the theme."
-        },
-        {
-          "path": "frontend/src/pages/HomePage.tsx",
-          "operation": "modify",
-          "description": "Apply the shared theme components and typography scale to the hero, feature blocks, and call-to-action sections for consistent look and spacing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add required generated static images under frontend/public/assets/generated and render them in the UI without using the backend to serve them.",
-      "acceptanceCriteria": [
-        "Images exist at frontend/public/assets/generated with the specified filenames",
-        "At least the logo and hero image are displayed on the site",
-        "No backend endpoints are used to serve generated images"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/ardee-industries-logo.dim_1024x256.png",
-          "operation": "create",
-          "description": "Add the generated static industrial wordmark logo image asset at the exact path and filename specified."
-        },
-        {
-          "path": "frontend/public/assets/generated/hero-aluminum-trading.dim_1920x900.png",
-          "operation": "create",
-          "description": "Add the generated static hero background illustration image asset at the exact path and filename specified."
-        },
-        {
-          "path": "frontend/public/assets/generated/aluminum-pattern.dim_1024x1024.png",
-          "operation": "create",
-          "description": "Add the generated static seamless pattern texture image asset at the exact path and filename specified."
-        },
-        {
-          "path": "frontend/src/components/site/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Render the logo from frontend/public/assets/generated/ardee-industries-logo.dim_1024x256.png in the header brand area without routing through any backend capability."
-        },
-        {
-          "path": "frontend/src/pages/HomePage.tsx",
-          "operation": "modify",
-          "description": "Render the hero visual using frontend/public/assets/generated/hero-aluminum-trading.dim_1920x900.png as a prominent Home page element without routing through any backend capability."
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Use frontend/public/assets/generated/aluminum-pattern.dim_1024x1024.png as a subtle background texture (e.g., for sections or page background) while keeping readability and performance in mind."
+          "description": "Optionally add the exact sentence \"We have a warehouse in Wada MIDC\" to the footer contact/company info area to improve consistency across public pages while keeping it visible and not behind any authentication."
         }
       ]
     }

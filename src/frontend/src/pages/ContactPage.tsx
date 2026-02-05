@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Warehouse } from 'lucide-react';
 import InquiryForm from '../components/inquiry/InquiryForm';
 import ThemeCard from '../components/site/ThemeCard';
 
@@ -38,21 +38,36 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-accent mt-0.5" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">info@ardeeindustries.com</p>
+                    <p className="text-sm text-muted-foreground">smengineering8@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-accent mt-0.5" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                    <div className="text-sm text-muted-foreground space-y-1">
+                      <p>9820790317</p>
+                      <p>8956274865</p>
+                      <p>8806318531</p>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-accent mt-0.5" />
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-sm text-muted-foreground">Serving North America</p>
+                    <p className="text-sm text-muted-foreground">
+                      UNIT NO 105, MEGHDHOOT SIGNATURE INDUSTRIAL PARK, NEAR RTO, HDIL VIRAR EAST, MUMBAI
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Warehouse className="h-5 w-5 text-accent mt-0.5" />
+                  <div>
+                    <p className="font-medium">Warehouse</p>
+                    <p className="text-sm text-muted-foreground">
+                      We have a warehouse in Wada MIDC
+                    </p>
                   </div>
                 </div>
               </div>

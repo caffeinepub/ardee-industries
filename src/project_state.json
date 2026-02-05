@@ -1,53 +1,122 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Website project for ARDEE INDUSTRIES focused on aluminum can trading.",
+  "projectStateVersion": 11,
+  "summary": "ICP canister-based web app for Ardee Industries aluminum trading site with Internet Identity authentication, public marketing pages, a contact/inquiry submission flow, and admin-only inquiry management UI backed by a Motoko canister with access control.",
   "existing_features": [
     {
-      "id": "feature-create-a-responsive-marketing-website-for-a-company-named-ardee-industries-focused-on-aluminum-can-trading-with-clear-navigation-and-english-user-facing-text",
-      "title": "Create a responsive marketing website for a company named \"ARDEE INDUSTRIES\" focused on aluminum can trading, with clear navigation and English user-facing text.",
+      "id": "IF-1",
+      "title": "ICP canister project scaffold (Motoko backend + React/Vite frontend)",
+      "synonyms": [
+        "core infrastructure",
+        "build template"
+      ],
+      "description": "Project scaffold includes build/deploy templates (Dockerfile, deploy.sh, icp.yaml, canister.yaml), TypeScript frontend setup (Vite, Tailwind), and Motoko backend entrypoint wiring.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "Internet Identity authentication integration",
+      "synonyms": [
+        "II auth",
+        "login"
+      ],
+      "description": "Frontend hooks and login UI integrate with Internet Identity; actor creation and authenticated calls are supported via useInternetIdentity/useActor utilities.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Backend authorization and access control (admin guard)",
+      "synonyms": [
+        "ACL",
+        "authorization mixin",
+        "AdminGuard"
+      ],
+      "description": "Motoko authorization modules implement access control; frontend includes an AdminGuard component to restrict admin routes/pages.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Public marketing site pages and layout",
+      "synonyms": [
+        "Home",
+        "About",
+        "Contact",
+        "Trading"
+      ],
+      "description": "Public pages (Home, About, Contact, Trading) with shared SiteLayout, SiteHeader, and SiteFooter.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Inquiry submission form (contact/inquiry flow)",
+      "synonyms": [
+        "InquiryForm",
+        "contact form"
+      ],
+      "description": "Frontend inquiry form with mapping/serialization utilities to submit inquiries to the backend.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Admin inquiries management UI",
+      "synonyms": [
+        "Admin inquiries page",
+        "Inquiry details"
+      ],
+      "description": "Admin pages to view inquiries list and drill into inquiry details (AdminInquiriesPage, AdminInquiryDetailsPage).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "UI component system using shadcn/ui + Tailwind",
+      "synonyms": [
+        "design system",
+        "shadcn"
+      ],
+      "description": "Shadcn UI component library added (accordion, dialog, form, table, etc.) with Tailwind configuration for consistent UI building blocks.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Generated brand and hero imagery assets",
+      "synonyms": [
+        "generated assets"
+      ],
+      "description": "Generated aluminum-themed pattern, logo, and hero image included under frontend/public/assets/generated.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Reusable build-template for ICP canister web app scaffold",
+      "synonyms": [
+        "build-template",
+        "template workspace"
+      ],
+      "description": "Adds a dedicated build-template workspace containing a full ICP app starter (Motoko backend + React/Vite frontend) with standard configs (pnpm workspace, canister.yaml/icp.yaml, Dockerfile, deploy.sh), shadcn/ui component set, and build scripts (e.g., image resize/prune, ESLint custom rules) for reuse across projects.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-occurrences-of-the-word-recycling-from-all-public-facing-marketing-ui-copy-across-the-site-including-home-about-trading-contact-pages-and-shared-layout-components-like-the-footer-replace-the-affected-sentences-headings-with-alternative-wording-that-preserves-meaning-but-does-not-use-the-word-recycling",
+      "title": "Remove all occurrences of the word \"recycling\" from all public-facing marketing UI copy across the site (including Home, About, Trading, Contact pages, and shared layout components like the footer). Replace the affected sentences/headings with alternative wording that preserves meaning but does not use the word \"recycling\".",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-implement-core-pages-sections-relevant-to-aluminum-can-trading-home-overview-trading-how-it-works-what-is-traded-about-and-contact-inquiry",
-      "title": "Implement core pages/sections relevant to aluminum can trading: Home (overview), Trading (how it works / what is traded), About, and Contact/Inquiry.",
+      "id": "feature-add-the-exact-sentence-we-have-a-warehouse-in-wada-midc-to-the-public-site-content-in-a-visible-appropriate-location-at-minimum-on-the-contact-page-contact-information-area-optionally-also-in-the-footer-company-info-if-it-improves-consistency",
+      "title": "Add the exact sentence \"We have a warehouse in Wada MIDC\" to the public site content in a visible, appropriate location (at minimum on the Contact page contact information area; optionally also in the footer/company info if it improves consistency).",
       "reqIds": [
         "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-an-inquiry-form-for-aluminum-can-trading-requests-that-collects-name-company-optional-email-or-phone-inquiry-type-buy-sell-partnership-location-optional-estimated-quantity-optional-message-and-consent-checkbox-validate-required-fields-client-side-and-show-success-error-states",
-      "title": "Add an Inquiry form for aluminum can trading requests that collects: name, company (optional), email or phone, inquiry type (Buy / Sell / Partnership), location (optional), estimated quantity (optional), message, and consent checkbox; validate required fields client-side and show success/error states.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-an-admin-area-in-the-frontend-that-uses-internet-identity-login-and-allows-an-authenticated-admin-to-view-submitted-inquiries-in-a-list-and-open-a-details-view",
-      "title": "Add an admin area in the frontend that uses Internet Identity login and allows an authenticated admin to view submitted inquiries in a list and open a details view.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-define-a-coherent-distinctive-visual-theme-for-ardee-industries-and-apply-it-consistently-across-typography-spacing-buttons-cards-and-page-layout-avoid-blue-purple-as-primary-brand-colors",
-      "title": "Define a coherent, distinctive visual theme for ARDEE INDUSTRIES and apply it consistently across typography, spacing, buttons, cards, and page layout (avoid blue/purple as primary brand colors).",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-required-generated-static-images-to-the-project-under-frontend-public-assets-generated-and-render-them-in-the-ui-e-g-logo-and-hero-visuals-without-routing-images-through-the-backend",
-      "title": "Add required generated static images to the project under frontend/public/assets/generated and render them in the UI (e.g., logo and hero visuals) without routing images through the backend.",
-      "reqIds": [
-        "REQ-7"
       ],
       "version": 1
     }
@@ -55,44 +124,57 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Create a website named ARDEE INDUSTRIES for aluminum can trading",
+      "summary": "Update site contact section with phone numbers (9820790317, 8956274865, 8806318531) and display email smengineering8@gmail.com",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-5",
-      "summary": "Create backend persistence for Inquiry submissions in the single Motoko main actor, including: createInquiry, listInquiries (admin-only), and getInquiry (admin-only).",
-      "reqIds": [
-        "REQ-4"
-      ],
+      "id": "AR-2",
+      "summary": "Update site content to remove all occurrences of the word \"recycling\" and add copy: \"We have a warehouse in Wada MIDC\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Update marketing content/address details to include: UNIT NO 105, MEGHDHOOT SIGNATURE INDUSTRIAL PARK, NEAR RTO, HDIL VIRAR EAST, MUMBAI (and remove \"trader\" wording as requested)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add realistic aluminum can production photos and beverage product/company images to improve site realism",
+      "reqIds": [],
       "status": "pending"
     }
   ],
-  "architectural_notes": [],
+  "architectural_notes": [
+    "Internet Identity used for authentication; authenticated actor pattern via frontend hooks.",
+    "Motoko backend includes reusable authorization/access-control modules; admin-only routes enforced in UI (AdminGuard).",
+    "Frontend is React + Vite + Tailwind with shadcn/ui component library; canister bindings via generated declarations.",
+    "A reusable build-template workspace is maintained alongside the app, including standard deploy/build configs plus tooling scripts (image resize/prune, custom ESLint rules) to keep scaffolding consistent."
+  ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Industrial wordmark logo reading \"ARDEE INDUSTRIES\" (ardee-industries-logo.dim_1024x256.png)\n- Hero background illustration featuring aluminum cans / recycled aluminum texture in an industrial style (hero-aluminum-trading.dim_1920x900.png)\n- Seamless pattern texture of aluminum cans or aluminum surface (aluminum-pattern.dim_1024x1024.png)",
   "generatedImages": [
     {
-      "filename": "ardee-industries-logo.dim_1024x256.png",
-      "description": "Industrial wordmark logo reading \"ARDEE INDUSTRIES\"",
+      "filename": "frontend/public/assets/generated/aluminum-pattern.dim_1024x1024.png",
+      "description": "Aluminum pattern background asset",
+      "targetWidth": 1024,
+      "targetHeight": 1024
+    },
+    {
+      "filename": "frontend/public/assets/generated/ardee-industries-logo.dim_1024x256.png",
+      "description": "Ardee Industries logo asset",
       "targetWidth": 1024,
       "targetHeight": 256
     },
     {
-      "filename": "hero-aluminum-trading.dim_1920x900.png",
-      "description": "Hero background illustration featuring aluminum cans / recycled aluminum texture in an industrial style",
+      "filename": "frontend/public/assets/generated/hero-aluminum-trading.dim_1920x900.png",
+      "description": "Hero banner image for aluminum trading theme",
       "targetWidth": 1920,
       "targetHeight": 900
-    },
-    {
-      "filename": "aluminum-pattern.dim_1024x1024.png",
-      "description": "Seamless pattern texture of aluminum cans or aluminum surface",
-      "targetWidth": 1024,
-      "targetHeight": 1024
     }
   ],
-  "gameProjectType": "none",
   "projectName": "ARDEE INDUSTRIES",
   "clarification_mode": "instant",
   "clarification_rounds": 0

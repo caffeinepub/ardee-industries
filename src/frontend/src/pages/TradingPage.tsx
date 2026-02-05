@@ -14,7 +14,7 @@ export default function TradingPage() {
               Aluminum Can Trading
             </h1>
             <p className="text-lg text-muted-foreground">
-              Comprehensive trading services for recycled aluminum cans and scrap materials
+              Comprehensive trading services for recovered aluminum cans and scrap materials
             </p>
           </div>
         </div>
@@ -31,8 +31,8 @@ export default function TradingPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <ThemeCard title="UBC (Used Beverage Cans)">
             <p className="text-muted-foreground">
-              Post-consumer aluminum beverage cans, sorted and baled for recycling. The most common 
-              grade in the aluminum recycling market.
+              Post-consumer aluminum beverage cans, sorted and baled for reprocessing. The most common 
+              grade in the aluminum market.
             </p>
           </ThemeCard>
           <ThemeCard title="Sorted Aluminum Scrap">
