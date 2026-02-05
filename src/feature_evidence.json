@@ -1,0 +1,138 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-a-company-named-ardee-industries-focused-on-aluminum-can-trading-with-clear-navigation-and-english-user-facing-text",
+      "featureTitle": "Create a responsive marketing website for a company named \"ARDEE INDUSTRIES\" focused on aluminum can trading, with clear navigation and English user-facing text.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/site/SiteFooter.tsx",
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/components/site/SiteLayout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-core-pages-sections-relevant-to-aluminum-can-trading-home-overview-trading-how-it-works-what-is-traded-about-and-contact-inquiry",
+      "featureTitle": "Implement core pages/sections relevant to aluminum can trading: Home (overview), Trading (how it works / what is traded), About, and Contact/Inquiry.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/TradingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-inquiry-form-for-aluminum-can-trading-requests-that-collects-name-company-optional-email-or-phone-inquiry-type-buy-sell-partnership-location-optional-estimated-quantity-optional-message-and-consent-checkbox-validate-required-fields-client-side-and-show-success-error-states",
+      "featureTitle": "Add an Inquiry form for aluminum can trading requests that collects: name, company (optional), email or phone, inquiry type (Buy / Sell / Partnership), location (optional), estimated quantity (optional), message, and consent checkbox; validate required fields client-side and show success/error states.",
+      "files": [
+        "frontend/src/components/inquiry/InquiryForm.tsx",
+        "frontend/src/components/inquiry/inquiryMapping.ts",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-admin-area-in-the-frontend-that-uses-internet-identity-login-and-allows-an-authenticated-admin-to-view-submitted-inquiries-in-a-list-and-open-a-details-view",
+      "featureTitle": "Add an admin area in the frontend that uses Internet Identity login and allows an authenticated admin to view submitted inquiries in a list and open a details view.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/admin/AdminGuard.tsx",
+        "frontend/src/components/auth/LoginButton.tsx",
+        "frontend/src/pages/admin/AdminInquiriesPage.tsx",
+        "frontend/src/pages/admin/AdminInquiryDetailsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-define-a-coherent-distinctive-visual-theme-for-ardee-industries-and-apply-it-consistently-across-typography-spacing-buttons-cards-and-page-layout-avoid-blue-purple-as-primary-brand-colors",
+      "featureTitle": "Define a coherent, distinctive visual theme for ARDEE INDUSTRIES and apply it consistently across typography, spacing, buttons, cards, and page layout (avoid blue/purple as primary brand colors).",
+      "files": [
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/components/site/ThemeCard.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-generated-static-images-to-the-project-under-frontend-public-assets-generated-and-render-them-in-the-ui-e-g-logo-and-hero-visuals-without-routing-images-through-the-backend",
+      "featureTitle": "Add required generated static images to the project under frontend/public/assets/generated and render them in the UI (e.g., logo and hero visuals) without routing images through the backend.",
+      "files": [
+        "frontend/src/components/site/SiteHeader.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

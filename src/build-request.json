@@ -1,0 +1,151 @@
+{
+  "kind": "build_request",
+  "title": "ARDEE INDUSTRIES aluminum can trading website",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for a company named \"ARDEE INDUSTRIES\" focused on aluminum can trading, with clear navigation and English user-facing text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website named ARDEE INDUSTRIES \nFor Aluminum can trading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The site header prominently displays \"ARDEE INDUSTRIES\"",
+        "The site renders well on mobile and desktop (no horizontal scrolling at common breakpoints)",
+        "All visible UI text is in English"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement core pages/sections relevant to aluminum can trading: Home (overview), Trading (how it works / what is traded), About, and Contact/Inquiry.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "For Aluminum can trading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can reach Home, Trading, About, and Contact/Inquiry from the main navigation",
+        "Each page/section contains non-placeholder, domain-relevant copy for aluminum can trading"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add an Inquiry form for aluminum can trading requests that collects: name, company (optional), email or phone, inquiry type (Buy / Sell / Partnership), location (optional), estimated quantity (optional), message, and consent checkbox; validate required fields client-side and show success/error states.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "For Aluminum can trading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The form prevents submission when required fields are missing and shows inline validation messages",
+        "On successful submission, a confirmation message is shown and the form resets",
+        "On failure, an error message is shown without losing the user-entered text"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create backend persistence for Inquiry submissions in the single Motoko main actor, including: createInquiry, listInquiries (admin-only), and getInquiry (admin-only).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "For Aluminum can trading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submitting an Inquiry from the frontend stores a new record in the backend",
+        "An admin-only method can list all stored inquiries",
+        "Non-admin callers cannot list or fetch inquiry details"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add an admin area in the frontend that uses Internet Identity login and allows an authenticated admin to view submitted inquiries in a list and open a details view.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website named ARDEE INDUSTRIES"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin login uses the existing Internet Identity integration (without modifying immutable hook files)",
+        "After login, the admin can view a list of inquiries (most recent first)",
+        "Admin can open an inquiry to view all its fields"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Define a coherent, distinctive visual theme for ARDEE INDUSTRIES and apply it consistently across typography, spacing, buttons, cards, and page layout (avoid blue/purple as primary brand colors).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website named ARDEE INDUSTRIES"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent color palette and typographic scale is used across all pages",
+        "Primary/secondary button styles are consistent and reused",
+        "The overall theme is not primarily blue/purple"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add required generated static images to the project under frontend/public/assets/generated and render them in the UI (e.g., logo and hero visuals) without routing images through the backend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a website named ARDEE INDUSTRIES"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Images exist at frontend/public/assets/generated with the specified filenames",
+        "At least the logo and hero image are displayed on the site",
+        "No backend endpoints are used to serve generated images"
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor in backend/main.mo.",
+    "Do not edit files under frontend/src/components/ui (compose them instead).",
+    "Do not edit immutable frontend hook entrypoints listed in SYSTEM_CONTEXT."
+  ],
+  "nonGoals": [
+    "Real-time chat, WebSockets, or push notifications.",
+    "Third-party authentication providers other than Internet Identity.",
+    "External databases or non-Motoko backend services.",
+    "Payments processing or escrow features."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Industrial wordmark logo reading \"ARDEE INDUSTRIES\" (ardee-industries-logo.dim_1024x256.png)",
+      "Hero background illustration featuring aluminum cans / recycled aluminum texture in an industrial style (hero-aluminum-trading.dim_1920x900.png)",
+      "Seamless pattern texture of aluminum cans or aluminum surface (aluminum-pattern.dim_1024x1024.png)"
+    ],
+    "edits": []
+  }
+}
